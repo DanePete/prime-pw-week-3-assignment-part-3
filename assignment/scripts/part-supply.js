@@ -76,13 +76,12 @@ console.log('8. Showing supplyChanges with "while" loop');
 
 let count = 0;
 while (count < supplyChanges.length) {
-  console.log('count is equal to ', count);
-  if(count > 0) {
-    console.log('Added x parts');
-  } else if(count == 0) {
+  if(supplyChanges[count] > 0) {
+    console.log('Added ', supplyChanges[count], ' parts');
+  } else if(supplyChanges[count] == 0) {
     console.log("No Change");
-  } else if (count < 0) {
-    console.log("Removed x parts");
+  } else if (supplyChanges[count] < 0) {
+    console.log('Removed ', supplyChanges[count], ' parts');
   }
   count++;
 }
